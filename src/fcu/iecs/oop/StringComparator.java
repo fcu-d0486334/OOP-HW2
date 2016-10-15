@@ -3,18 +3,23 @@ import java.util.Scanner;
 public class StringComparator {
 	public static void main(String[] args) {
 		Scanner scn=new Scanner(System.in);
-		String string_1,string_2;
-		System.out.print("Enter a string 1: ");
-		string_1=scn.nextLine();
-		
-		System.out.print("Enter a string 2: ");
-		string_2=scn.nextLine();
-
-		if(string_1.compareToIgnoreCase(string_2)==0){
-			System.out.println("The two strings are the same.");
+		String s1,s2;
+		boolean isEqual=false;
+		while(!isEqual){
+			System.out.print("Enter a string 1:");
+			s1=scn.nextLine();
+			
+			System.out.print("Enter a string 2:");
+			s2=scn.nextLine();
+			
+			if(s1.equalsIgnoreCase(s2)){
+				System.out.println("The two lines are equal.");
+				isEqual=true;
+			}else{
+				System.out.println("The two lines are not equal.");
+				isEqual=false;
+			}
 		}
-		else{
-			System.out.println("The two strings are not the same.");
-		}
+		scn.close();
 	}
 }

@@ -16,7 +16,9 @@ public class KeyboardScanner {
 		System.out.print("Enter your name: ");
 		name=scn.next();
 		
-		System.out.printf("Hi %s, the multiplication of %d and %f is %e.",name,i,f,i+f);
+		System.out.printf("Hi %s, the multiplication of %d and %.5f is %e.",name,i,f,i*f);
+		
+		scn.close();
 	}
 
 }
